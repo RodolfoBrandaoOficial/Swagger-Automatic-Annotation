@@ -13,9 +13,10 @@ Utilize the provided classes and annotations to automatically configure document
 Add the following dependencies to your project:
 
 ```gradle
-// SpringDoc for OpenAPI
-implementation "org.springdoc:springdoc-openapi-starter-common:${springdocVersion}"
-implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
+    // SpringDoc for OpenAPI
+    implementation "org.springdoc:springdoc-openapi-starter-common:${springdocVersion}"
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
+    implementation 'org.aspectj:aspectjweaver:1.9.7'
 ```
 // AspectJ for AOP
 implementation 'org.aspectj:aspectjweaver:1.9.7'
