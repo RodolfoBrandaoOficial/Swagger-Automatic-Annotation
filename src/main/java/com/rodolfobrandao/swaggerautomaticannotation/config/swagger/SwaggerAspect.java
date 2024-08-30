@@ -11,8 +11,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-import static com.rodolfobrandao.swaggerautomaticannotation.config.swagger.OpenApiConfig.BASE_PACKAGE_CONTROLLER;
-
 /**
  * OpenApiConfig
  * Auto Doc Swagger
@@ -30,7 +28,7 @@ public class SwaggerAspect {
      * @param joinPoint o ponto de junção representando a execução do método
      * @throws Throwable se ocorrer algum erro durante a reflexão
      */
-    @Before("execution(public * "+ BASE_PACKAGE_CONTROLLER+" *.*(..))")
+    @Before("execution(public * .controller *(..))")
     public void processDefaultOperation(JoinPoint joinPoint) throws Throwable {
         Method method = getMethodFromJoinPoint(joinPoint);
         DefaultOperation defaultOperation = AnnotationUtils.findAnnotation(method, DefaultOperation.class);

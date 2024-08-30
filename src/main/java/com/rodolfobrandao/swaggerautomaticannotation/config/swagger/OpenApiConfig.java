@@ -26,7 +26,6 @@ public class OpenApiConfig {
      *     Exemplo: com.rodolfobrandao.swaggerautomaticannotation.controller
      *     <br>
      */
-    static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.swaggerautomaticannotation.controller";
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
