@@ -1,6 +1,12 @@
 ### 🌟 Swagger Automatic Annotation for Spring Boot
 Este projeto oferece uma configuração automática de anotações Swagger para documentar APIs de projetos Spring Boot, simplificando a documentação e melhorando a clareza da sua API.
 
+
+<div align="center">
+<img src="https://github.com/RodolfoBrandaoOficial/Swagger-Automatic-Annotation/blob/main/srcGitHub/autodocanotation.png?raw=true" width="700px" />
+</div>
+
+
 ### 📜 Descrição
 Utilize as classes e anotações fornecidas para configurar automaticamente informações de documentação para endpoints de APIs em seu projeto Spring Boot.
 
