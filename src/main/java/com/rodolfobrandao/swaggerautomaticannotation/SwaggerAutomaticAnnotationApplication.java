@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SwaggerAutomaticAnnotationApplication {
 
-
     public static void main(String[] args) {
         SpringApplication.run(SwaggerAutomaticAnnotationApplication.class, args);
+        System.err.println("https://github.com/RodolfoBrandaoOficial");
     }
 
 }
