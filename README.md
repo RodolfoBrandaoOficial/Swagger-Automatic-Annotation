@@ -16,19 +16,17 @@ Add the following dependencies to your project:
     // SpringDoc for OpenAPI
     implementation "org.springdoc:springdoc-openapi-starter-common:${springdocVersion}"
     implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
+    // AspectJ for AOP
     implementation 'org.aspectj:aspectjweaver:1.9.7'
 ```
-// AspectJ for AOP
-implementation 'org.aspectj:aspectjweaver:1.9.7'
-<<<<<<< HEAD
+
 ### 🚀 Como Usar
 Adicione as dependências: Inclua as dependências do Swagger e AspectJ no seu projeto Spring Boot.
 Use a anotação @DefaultOperation: Adicione a anotação aos métodos dos seus controladores para gerar documentação automaticamente.
+
 ### IMPORTANTE adicione o local do controller
 Acesse o arquivo OpenApiConfig.java e adicione o local do controller que deseja documentar automaticamente.
 e edite o     static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.swaggerautomaticannotation.controller"; para o local do seu controller
-
-
 
 ### 📚 Exemplo
 No controlador:
@@ -36,6 +34,7 @@ No controlador:
 🚀 How to Use
 Add Dependencies: Include the Swagger and AspectJ dependencies in your Spring Boot project.
 Use the @DefaultOperation Annotation: Add the annotation to your controller methods to automatically generate documentation.
+
 📚 Example
 In your controller:
     @DefaultOperation(summary = "List clients", description = "Retrieve a list of all clients", tags = {"Client"})
