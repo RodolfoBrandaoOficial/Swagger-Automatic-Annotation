@@ -37,7 +37,7 @@ Add Dependencies: Include the Swagger and AspectJ dependencies in your Spring Bo
 Use the @DefaultOperation Annotation: Add the annotation to your controller methods to automatically generate documentation.
 📚 Example
 In your controller:
->>>>>>> 9e64784d3da9c804ebe1bdf4f3ede86fde235b4d
+    @DefaultOperation(summary = "List clients", description = "Retrieve a list of all clients", tags = {"Client"})
 
 ```java
 package com.rodolfobrandao.swaggerautomaticannotation.controller;
