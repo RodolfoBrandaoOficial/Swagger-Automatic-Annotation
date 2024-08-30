@@ -28,7 +28,7 @@ Acesse o arquivo OpenApiConfig.java e adicione o local do controller que deseja 
 e edite o     static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.swaggerautomaticannotation.controller"; para o local do seu controller
 
 
-```java
+
 ### 📚 Exemplo
 No controlador:
 =======
