@@ -1,20 +1,25 @@
-### 🌟 Swagger Automatic Annotation for Spring Boot
-Este projeto oferece uma configuração automática de anotações Swagger para documentar APIs de projetos Spring Boot, simplificando a documentação e melhorando a clareza da sua API.
+🌟 Swagger Automatic Annotation for Spring Boot
+This project provides automatic Swagger annotation configuration to document APIs for Spring Boot projects, streamlining documentation and enhancing the clarity of your API.
 
-### 📜 Descrição
-Utilize as classes e anotações fornecidas para configurar automaticamente informações de documentação para endpoints de APIs em seu projeto Spring Boot.
+Project Features
+HotReload with Spring Boot DevTools: Automatically reloads your application when changes are made.
+Swagger Documentation: Easily integrate Swagger to document your API endpoints.
+Custom Annotation: A specially created annotation to simplify and standardize your API documentation.
+<div align="center"> <img src="https://github.com/RodolfoBrandaoOficial/Swagger-Automatic-Annotation/blob/main/srcGitHub/autodocanotation.png?raw=true" width="700px" /> </div>
+📜 Description
+Utilize the provided classes and annotations to automatically configure documentation for API endpoints in your Spring Boot project.
 
-### 🛠️ Dependências
-Adicione as seguintes dependências ao seu projeto:
+🛠️ Dependencies
+Add the following dependencies to your project:
 
 ```gradle
-
 // SpringDoc for OpenAPI
 implementation "org.springdoc:springdoc-openapi-starter-common:${springdocVersion}"
 implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
 ```
-// AspectJ para AOP
+// AspectJ for AOP
 implementation 'org.aspectj:aspectjweaver:1.9.7'
+<<<<<<< HEAD
 ### 🚀 Como Usar
 Adicione as dependências: Inclua as dependências do Swagger e AspectJ no seu projeto Spring Boot.
 Use a anotação @DefaultOperation: Adicione a anotação aos métodos dos seus controladores para gerar documentação automaticamente.
@@ -26,6 +31,13 @@ e edite o     static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.
 ```java
 ### 📚 Exemplo
 No controlador:
+=======
+🚀 How to Use
+Add Dependencies: Include the Swagger and AspectJ dependencies in your Spring Boot project.
+Use the @DefaultOperation Annotation: Add the annotation to your controller methods to automatically generate documentation.
+📚 Example
+In your controller:
+>>>>>>> 9e64784d3da9c804ebe1bdf4f3ede86fde235b4d
 
 ```java
 package com.rodolfobrandao.swaggerautomaticannotation.controller;
@@ -39,28 +51,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/client")
 public class ExampleController {
 
-    @DefaultOperation(summary = "Listar", description = "Listar clientes", tags = {"Cliente"})
+    @DefaultOperation(summary = "List clients", description = "Retrieve a list of all clients", tags = {"Client"})
     @GetMapping("/list")
     public String listClients() {
-        // Implementação
+        // Implementation
         return "List of clients";
     }
 }
 ```
-### 🔒 Configuração de Segurança
-Se estiver utilizando o Spring Security, permita o acesso ao Swagger adicionando a seguinte configuração:
+🔒 Security Configuration
+If using Spring Security, allow access to Swagger by adding the following configuration:
 
 ```java
 @Override
 protected void configure(HttpSecurity http) throws Exception {
-http
-.authorizeRequests()
-.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
-.anyRequest().authenticated();
+    http
+        .authorizeRequests()
+        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+        .anyRequest().authenticated();
 }
 ```
-### 🤝 Contribuição
-Sinta-se à vontade para enviar pull requests com melhorias e correções. Sua contribuição é muito bem-vinda!
+🤝 Contribution
+Feel free to submit pull requests with improvements and fixes. Your contributions are highly appreciated!
 
-📜 Licença
-Este projeto está licenciado sob a Licença MIT.
+📜 License
+This project is licensed under the MIT License.
