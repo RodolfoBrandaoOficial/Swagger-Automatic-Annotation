@@ -18,6 +18,12 @@ implementation 'org.aspectj:aspectjweaver:1.9.7'
 ### 🚀 Como Usar
 Adicione as dependências: Inclua as dependências do Swagger e AspectJ no seu projeto Spring Boot.
 Use a anotação @DefaultOperation: Adicione a anotação aos métodos dos seus controladores para gerar documentação automaticamente.
+### IMPORTANTE adicione o local do controller
+Acesse o arquivo OpenApiConfig.java e adicione o local do controller que deseja documentar automaticamente.
+e edite o     static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.swaggerautomaticannotation.controller"; para o local do seu controller
+
+
+```java
 ### 📚 Exemplo
 No controlador:
 

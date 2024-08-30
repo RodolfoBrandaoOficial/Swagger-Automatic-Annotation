@@ -17,7 +17,16 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class OpenApiConfig {
-
+    /**
+     * O pacote base dos controladores.
+     * <p>
+     *     O pacote base dos controladores é usado para interceptar os métodos dos controladores
+     *     e processar e definir valores padrão das anotações de operação do Swagger.
+     *     <br>
+     *     Exemplo: com.rodolfobrandao.swaggerautomaticannotation.controller
+     *     <br>
+     */
+    static final String BASE_PACKAGE_CONTROLLER = "com.rodolfobrandao.swaggerautomaticannotation.controller";
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
