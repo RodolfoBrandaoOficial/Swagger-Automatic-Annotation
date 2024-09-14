@@ -2,7 +2,7 @@
 This project provides automatic Swagger annotation configuration to document APIs for Spring Boot projects, streamlining documentation and enhancing the clarity of your API.
 
 ### Acess browser
-Acess in browser http://localhost:8081/swagger-ui/index.html#/
+Acess in browser http://localhost:8080/swagger-ui/index.html#/
 
 Project Features
 HotReload with Spring Boot DevTools: Automatically reloads your application when changes are made.
