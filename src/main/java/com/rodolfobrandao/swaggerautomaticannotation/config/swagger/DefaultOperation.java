@@ -1,6 +1,8 @@
 package com.rodolfobrandao.swaggerautomaticannotation.config.swagger;
 
+
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
@@ -10,15 +12,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * OpenApiConfig
+ * DefaultOperation
  * Auto Doc Swagger
  * Github-RodolfoBrandaoOficial
- * RodolfoBrandaoOficial/Swagger-Automatic-Annotation
  */
 
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Operation(summary = "", description = "")
+@Operation
 @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Successful operation"),
         @ApiResponse(responseCode = "400", description = "Invalid input"),
@@ -29,4 +30,6 @@ public @interface DefaultOperation {
     String summary() default "";
     String description() default "";
     String[] tags() default {};
+    Parameter[] parameters() default {};
 }
+
